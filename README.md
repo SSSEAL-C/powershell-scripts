@@ -3,6 +3,12 @@ An array of PowerShell scripts I wrote for educational purposes. Don't misuse th
 
 Some of these scripts are parts of code from other developers so I will credit them where I can
 
+Includes
+ - Uploading to Imgur in powershell
+ - Grabbing Discord Tokens with Powershell
+ - Getting stored wifi passwords with powershell
+ - Screenshotting the users screen in powershell
+
 ## Credit
 
 Discord Webhooks in Powershell | [gngrninja](https://github.com/gngrninja/blog/blob/master/DiscordWebhook/embeds.ps1)
