@@ -8,6 +8,8 @@ Includes
  - Grabbing Discord Tokens with Powershell
  - Getting stored wifi passwords with powershell
  - Screenshotting the users screen in powershell
+ - Grabbing Roblox Cookies with powershell
+ - A Powershell Keylogger
 
 ## Credit
 
@@ -16,6 +18,8 @@ Discord Webhooks in Powershell | [gngrninja](https://github.com/gngrninja/blog/b
 Discord Token Grabbing in Powershell | [F1sk](https://github.com/FiskDk/PowerShell-Discord-Token-Grabber)
 
 Getting Images from Clipboard in Powershell | [thom schumacher](https://stackoverflow.com/questions/55215482/save-image-from-clipboard-using-powershell)
+
+Keylogger Base | [dasgoll](https://gist.github.com/dasgoll/7ca1c059dd3b3fbc7277)
 
 Uploading Images to Imgur in Powershell | [Deleted Reddit User](https://www.reddit.com/r/PowerShell/comments/2i0t6f/comment/ckzwori/?utm_source=share&utm_medium=web2x&context=3)
 
