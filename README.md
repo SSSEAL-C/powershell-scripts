@@ -23,6 +23,8 @@ Keylogger Base | [dasgoll](https://gist.github.com/dasgoll/7ca1c059dd3b3fbc7277)
 
 Uploading Images to Imgur in Powershell | [Deleted Reddit User](https://www.reddit.com/r/PowerShell/comments/2i0t6f/comment/ckzwori/?utm_source=share&utm_medium=web2x&context=3)
 
+Note: All of these have been web archived.
+
 
 ## Helpful Powershell Sidenotes
 
