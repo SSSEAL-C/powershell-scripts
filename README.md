@@ -34,4 +34,14 @@ This opens a url in the default browser
 
 ```iex ((New-Object System.Net.WebClient).DownloadString('url here'))```
 
-downloads a powershell script from a raw text hosting site [pastebin](https://pastebin.com/) (use unlisted mode if your uploading a script with sensitive information included), [ghostbin](https://ghostbin.com/)
+downloads a powershell script from a raw text hosting site 
+[pastebin](https://pastebin.com/) use unlisted mode if your uploading a script with sensitive information included
+[ghostbin](https://ghostbin.com/) seems to delete scripts occasionally
+[rentry.co](https://rentry.co/)
+[dpaste.com](https://dpaste.com/) looks good with expiry options
+[hastebin](https://www.toptal.com/developers/hastebin/)
+[paste-bin.xyz](https://paste-bin.xyz/)
+[snippet.host](https://snippet.host/)
+[dpaste.org](https://dpaste.org/)
+[textbin.tk](https://textbin.tk/)
+[textbin.pl](https://textbin.pl/)
