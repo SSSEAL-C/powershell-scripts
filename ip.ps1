@@ -1,8 +1,9 @@
 $webhookUrl = "WEBHOOK"
-$content = (Get-NetIPAddress -AddressFamily IPV4).IPAddress
+$content = (Get-NetIPAddress -AddressFamily IPV4).IPAddress + "|"+(Get-NetIPAddress -AddressFamily IPV4).InterfaceAlias
 $blank=$content.Split(" ")
 $ips = @()
 foreach ($thing in $blank) {
+    $thing=$thing+" | "+(Get-NetIPAddress -AddressFamily IPV4 -IPAddress $thing).InterfaceAlias
     if ($thing -eq '127.0.0.1') {break}
     if ($thing.substring(0,8) -eq '192.168.') {break}
     if ($thing.substring(0,3) -eq '10.') {break}
@@ -28,6 +29,7 @@ $privateips = @()
 $content = (Get-NetIPAddress -AddressFamily IPV4).IPAddress
 $blank=$content.Split(" ")
 foreach ($thing in $blank) {
+    $thing=$thing+" | "+(Get-NetIPAddress -AddressFamily IPV4 -IPAddress $thing).InterfaceAlias
     if ($thing -eq '127.0.0.1') {$privateips=$privateips+$thing+"`n"}
     if ($thing.substring(0,8) -eq '192.168.') {$privateips=$privateips+$thing+"`n"}
     if ($thing.substring(0,3) -eq '10.') {$privateips=$privateips+$thing+"`n"}
